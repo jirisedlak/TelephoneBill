@@ -10,5 +10,12 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile('ch.qos.logback:logback-classic:1.2.3')
+
+    compileOnly('org.projectlombok:lombok:1.18.12')
+    annotationProcessor('org.projectlombok:lombok:1.18.12')
+
+    testCompile('junit:junit:4.12')
+    testCompileOnly('org.projectlombok:lombok:1.18.12')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.12')
 }
